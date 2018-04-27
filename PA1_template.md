@@ -21,7 +21,7 @@ Code which is necessary for initial loading of the dataset
    str(DataActivity
    #Checks dimensions and few rows of New Data Frame
    dim(DataActivity)
-   #Shows number of observations and variables mentioned in the assignment and we can see missing values at the first    day of data collection
+   #Shows number of observations and variables mentioned in the assignment and we can see missing     values at the first    day of data collection
    head(DataActivity)
 ```
 
@@ -31,7 +31,7 @@ Code which is necessary for initial loading of the dataset
    #Calculating the total steps per day
    stepsperday <- with(DataActivity, tapply(steps,as.factor(DataActivity$date), sum, na.rm = T))
    #Histogram of  total number of steps taken per day, plotted with appropriate bin interval.
-   hist(stepsperday, main = "Histogram of total number of steps taken per day", xlab = "Total number of steps")
+   hist(stepsperday, main = "Histogram of total number of steps taken per day", xlab = "Total        number of    steps")
 ```
 
 ![Total number of steps taken per day](M:\Reproducible Research\RepData_PeerAssessment1\figures\stepsperday.png) 
@@ -52,7 +52,7 @@ Code which is necessary for initial loading of the dataset
    #Average Steps Aggregrate
    averagesteps <- aggregate(steps ~ interval, data = DataActivity, mean, na.rm = TRUE)
    #Plots the avgsteps vs time interval
-   plot(steps ~ interval, data = averagesteps, type = "l", xlab = "Time Intervals (5-minute)", ylab = "Mean              number of steps taken (all Days)", main = "Average number of steps Taken at 5 minute Intervals",  col = "blue")
+   plot(steps ~ interval, data = averagesteps, type = "l", xlab = "Time Intervals (5-minute)", ylab =      "Mean       number of steps taken (all Days)", main = "Average number of steps Taken at 5 minute           Intervals",  col    = "blue")
 ```
 
 ![Time series plot of the average number of steps taken](M:\Reproducible Research\RepData_PeerAssessment1\figures\Avgnoofstepstaken.png)
